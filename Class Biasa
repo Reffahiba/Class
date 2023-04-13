@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class Laptop{
+    public:
+      double pc;
+      double monitor;
+      double keyboard;
+      double mouse;
+      double fan;
+};
+int main() {
+    Laptop harga;
+    int hasil;
+    harga.pc;
+    harga.monitor;
+    harga.keyboard;
+    harga.mouse;
+    harga.fan;
+    cin>>harga.pc;
+    cin>>harga.monitor;
+    cin>>harga.keyboard;
+    cin>>harga.mouse;
+    cin>>harga.fan;
+    
+    hasil = harga.pc + harga.monitor + harga.keyboard + harga.mouse + harga.fan;
+    cout<<"Harga dari laptop : " <<hasil;
+   
+    
+
+    return 0;
+}
