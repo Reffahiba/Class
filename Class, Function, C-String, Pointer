@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
+
+using namespace std;
+
+class Bilangan {
+    private:
+        int *arr;
+        int n;
+    public:
+        Bilangan(int jumlah) {
+            n = jumlah;
+            arr = new int[n];
+        }
+        ~Bilangan() {
+            delete [] arr;
+        }
+        void isiBilangan() {
+            char input[10];
+            for (int i = 0; i < n; i++) {
+                cout << "Masukkan bilangan ke-" << i+1 << ": ";
+                cin >> input;
+                arr[i] = atoi(input);
+            }
+        }
+        double hitungRata() {
+            int total = 0;
+            for (int i = 0; i < n; i++) {
+                total += arr[i];
+            }
+            return (double)total/n;
+        }
+};
+
+int main() {
+    int jumlah;
+    cout << "Masukkan jumlah bilangan: ";
+    cin >> jumlah;
+    Bilangan bil(jumlah);
+    bil.isiBilangan();
+    cout << "Rata-rata dari bilangan-bilangan tersebut adalah " << bil.hitungRata() << endl;
+    return 0;
+}
