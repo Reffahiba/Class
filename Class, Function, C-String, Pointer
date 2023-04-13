@@ -1,3 +1,4 @@
+//Mencari nilai rata-rata
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
@@ -40,5 +41,34 @@ int main() {
     Bilangan bil(jumlah);
     bil.isiBilangan();
     cout << "Rata-rata dari bilangan-bilangan tersebut adalah " << bil.hitungRata() << endl;
+    return 0;
+}
+
+//Suhu Celcius ke Fahrenheit
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
+
+using namespace std;
+
+class Suhu {
+    private:
+        double celsius;
+    public:
+        Suhu(double suhu) {
+            celsius = suhu;
+        }
+        double toFahrenheit() {
+            return (celsius * 1.8) + 32;
+        }
+};
+
+int main() {
+    char input[10];
+    cout << "Masukkan suhu dalam Celsius: ";
+    cin >> input;
+    double suhu = atof(input);
+    Suhu s(suhu);
+    cout << "Suhu dalam Fahrenheit adalah " << s.toFahrenheit() << endl;
     return 0;
 }
